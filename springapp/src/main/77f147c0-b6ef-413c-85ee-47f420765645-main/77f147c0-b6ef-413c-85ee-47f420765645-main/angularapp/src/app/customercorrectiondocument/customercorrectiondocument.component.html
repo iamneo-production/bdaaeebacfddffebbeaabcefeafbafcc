@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<app-navbar></app-navbar>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="customercorrectiondocument.component.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="#">
+        <div class="input-box">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" [(ngModel)]="id"> <br>
+         
+            <label for="docs">Image or Document (Upload below 2mb)</label><br><br>
+            <input type="file" placeholder="Choose a File" accept=".pdf, image/*" (change)="onFileSelected($event)" /><br>
+            <button [disabled]="!productImage" (click)="onUpload()">Upload</button><br>
+            <button style="float: right;" (click)="onSubmit()">Submit</button>
+          
+        </div>
+      </form>
+     </div>
+  </body>
+</html>

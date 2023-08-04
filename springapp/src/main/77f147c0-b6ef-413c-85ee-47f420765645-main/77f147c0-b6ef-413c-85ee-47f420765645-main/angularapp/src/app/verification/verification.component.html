@@ -1,0 +1,29 @@
+<app-adminnav></app-adminnav>
+<body>
+    <div class="row">
+        <h2>Verification</h2>
+    </div>
+    <div class="wrapper">
+      <div *ngIf="Applieddocuments ">        
+        Applicant Name: {{ Applieddocuments.firstname }}<br>
+        Applicant Father Name: {{ Applieddocuments.fathername }}<br>
+        Applicant Mother Name: {{ Applieddocuments.mothername }}<br>
+        Applicant Gender: {{ Applieddocuments.gender }}<br>
+        Applicant phone number: {{ Applieddocuments.mobilenumber }} <br>
+        Applicant Email: {{ Applieddocuments.email }}<br>
+        Applicant Age: {{ Applieddocuments.age }}<br>
+        Applicant Id: {{ Applieddocuments.id }}<br>
+        Applicant Address:  {{ Applieddocuments.address }}<br>
+      </div>
+      <div *ngIf="imageSrc">
+        <img [src]="imageSrc" alt="Profile Image" width="200" height="200">
+      <!-- <div *ngIf=retrievedImage>
+        Applicant DocumentId:  {{ retrievedImage.docid }}<br>
+        <input type="search" name = "docid" placeholder="Enter your document id" [(ngModel)]="docid" required>
+          <img [src]="retrievedImage">-->
+      </div> 
+      <button type="button"  (click)="reject()" >Reject</button>
+      <button type="button"  (click)="approve()" >Approve</button>
+      </div>
+
+</body>

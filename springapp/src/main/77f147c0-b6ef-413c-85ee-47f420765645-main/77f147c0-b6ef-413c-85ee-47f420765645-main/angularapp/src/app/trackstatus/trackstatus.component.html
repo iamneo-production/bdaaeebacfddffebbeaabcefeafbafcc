@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<app-navbar></app-navbar>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="trackstatus.component.css">
+   </head>
+<body> 
+  <div class="wrapper">
+    <h2>Track your Application</h2>
+    <form action="#">
+      <div class="input-box">
+        <input type="search" name = "id" placeholder="Enter your application id" [(ngModel)]="id" required>
+      </div>
+      <div *ngIf="Applieddocuments "> 
+      <button type="submit" (click)="track(Applieddocuments.id)">Track</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

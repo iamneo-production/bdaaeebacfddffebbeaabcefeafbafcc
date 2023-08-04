@@ -1,0 +1,20 @@
+<body>
+    <div class="wrapper">
+      <div *ngIf="Applieddocuments ">        
+        Name: {{ Applieddocuments.firstname }}<br>
+        Father Name: {{ Applieddocuments.fathername }}<br>
+        Mother Name: {{ Applieddocuments.mothername }}<br>
+        Gender: {{ Applieddocuments.gender }}<br>
+        phone number: {{ Applieddocuments.mobilenumber }} <br>
+        Email: {{ Applieddocuments.email }}<br>
+        Age: {{ Applieddocuments.age }}<br>
+        Aadhar Number: 4012 4256 154{{ Applieddocuments.id }}<br>
+        Address:  {{ Applieddocuments.peraddress }}<br>
+      </div>
+      <div *ngIf="imageSrc">
+        <img [src]="imageSrc" alt="Profile Image" width="200" height="200">
+      </div> 
+      
+      </div>
+
+</body>

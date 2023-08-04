@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div class = "wrapper">
+<div *ngIf="Applieddocuments "> 
+    <h1>Your Application has been submitted successfully</h1>
+    <h5>Applicant Id: {{ Applieddocuments.id }}</h5><br>
+    <button type="button"  (click)="home()" >Continue</button>
+</div>
+</div>

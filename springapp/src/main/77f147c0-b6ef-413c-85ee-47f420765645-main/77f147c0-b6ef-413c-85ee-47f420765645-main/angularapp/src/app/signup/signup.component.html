@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="signup.component.css">
+  </head>
+<body>
+  <div class="wrapper">
+    <h2>Sign Up</h2>
+    <form action="#">
+      <form ngNativeValidate #form>
+      <div class="input-box">
+        <select name="userRole" id="type" required [(ngModel)]="user.userRole">
+          <option value="">Enter Customer/Admin</option>
+          <option value="Customer">Customer</option>
+          <option value="Admin">Admin</option>
+        </select>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Enter email" required id="email" name="email" [(ngModel)]="user.email">
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Enter Username" required id="username" name="username" [(ngModel)]="user.username">
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Enter your Mobilenumber" required id="mobilenumber" name="mobilenumber" [(ngModel)]="user.mobilenumber">
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Enter password" required id="password" name="password"  [(ngModel)]="user.password" >
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Confirm password" required id="cpassword" name="cpassword" [(ngModel)]="user.confirmPassword">
+        <small *ngIf = "(!(confirmPassword == password))" style="color:red">! Password does not match</small>
+      </div><br>
+      <button name = "submit" type="submit">Submit</button><br><br>
+      <div class="text">
+        <h3>Already a user? <a href="login">Login</a></h3>
+      </div>
+    </form>
+  </form>
+  </div>
+</body>
+</html>

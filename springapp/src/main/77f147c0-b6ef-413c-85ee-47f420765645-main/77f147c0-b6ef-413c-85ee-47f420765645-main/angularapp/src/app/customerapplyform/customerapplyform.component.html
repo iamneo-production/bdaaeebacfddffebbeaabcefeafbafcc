@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<app-navbar></app-navbar>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="customerapplyform.component.css">
+</head>
+<body>
+   <h2>New Card form</h2>
+    <div class="newform">
+        <form actions="#">
+            <form ngNativeValidate #form>
+          <div class="input-box">
+          <input type="text" name = "firstname" id="firstName" placeholder="enter your firstname" [(ngModel)]="newcard.firstname" required>
+          <input type="text" name = "lastname" id="lastName" placeholder="enter your lastname" [(ngModel)]="newcard.lastname" required>
+          <input type="text" name = "gender" id="male/female" placeholder="enter male/female"[(ngModel)]="newcard.gender" required><br>
+          <input type="text" name = "fathername" id="fatherName" placeholder="enter your father name" [(ngModel)]="newcard.fathername" required>
+          <input type="text" name = "mothername" id="motherName" placeholder="enter your mother name" [(ngModel)]="newcard.mothername" required>
+          <input type="tel" name = "mobilenumber" id="phoneNumber1" placeholder="enter phone number" [(ngModel)]="newcard.mobilenumber" required><br>
+          <input type="tel" name = "altnumber" id="phoneNumber2" placeholder="enter alternate number" autocomplete="email" [(ngModel)]="newcard.altnumber" required>
+          <input type="text" name = "email" id="emailId" placeholder="enter email Id" [(ngModel)]="newcard.email" required>
+          <input type="number" name = "age" id="age" placeholder="enter your age" [(ngModel)]="newcard.age" required>
+          </div> 
+        </form>
+    </form>
+    </div>
+    <div class="address">
+        <form actions="#">
+            <form ngNativeValidate #form>
+        <h4>Address Information</h4><br>
+        <div class="input-box1">
+           <label for="houseno">House No:</label>
+           <input type="number" id="houseno" name="houseno" [(ngModel)]="houseno" required><br><br>
+           <label for="streetname">Street Name:</label>
+           <input type="text" id="streetname" name="streetname" [(ngModel)]="streetname" required><br><br>
+           <label for="areaname">Area Name:</label>
+           <input type="text" id="areaname" name="areaname" [(ngModel)]="areaname" required>
+           <label for="pincode">Pincode:</label>
+           <input type="number" id="pincode" name="pincode" [(ngModel)]="pincode" required><br><br>
+           <label for="state">State:</label>
+           <input type="text" id="state" name="state" [(ngModel)]="state" required>
+           <label for="nationality">Nationality:</label>
+           <input id="nationality" name="nationality" type="text" [(ngModel)]="nationality" required>
+           </div>
+        </form>
+    </form>
+    </div>
+      
+    <div class="peraddress">
+        <form actions="#">
+          <form ngNativeValidate #form>
+        <h4>Permanent Address Information</h4><br>
+        <div class="input-box1">
+            <label for="perhouseno">House No:</label>
+            <input type="number" id="perhouseno" name="perhouseno" [(ngModel)]="perhouseno" required><br><br>
+            <label for="perstreetname">Street Name:</label>
+            <input type="text" id="perstreetname" name="perstreetname" [(ngModel)]="perstreetname" required><br><br>
+            <label for="perareaname">Area Name:</label>
+            <input type="text" id="perareaname" name="perareaname" [(ngModel)]="perareaname" required>
+            <label for="perpincode">Pincode:</label>
+            <input type="number" id="perpincode" name="perpincode" [(ngModel)]="perpincode" required><br><br>
+            <label for="perstate">State:</label>
+            <input type="text" id="perstate" name="perstate" [(ngModel)]="perstate" required>
+            <label for="pernationality">Nationality:</label>
+            <input id="pernationality" name="pernationality" type="text" [(ngModel)]="pernationality" required>
+        </div>
+        </form>
+    </form>
+     </div>
+    <footer>
+        <button name = "submit" type="submit" (click)= "form.checkValidity()? onSubmit() : null">Submit</button>
+        <div *ngIf="newcard">     
+           <button type="button" (click)="onNext(newcard.email)">Nextpage</button></div>
+    </footer>
+</body>
+</html>
+

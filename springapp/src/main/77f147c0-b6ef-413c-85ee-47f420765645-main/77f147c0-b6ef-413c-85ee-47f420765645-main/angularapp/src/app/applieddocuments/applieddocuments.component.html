@@ -1,0 +1,23 @@
+<app-adminnav></app-adminnav>
+
+<body>
+    <div class="row">
+        <h2>Applied Documents</h2>
+    </div>
+<div class="wrapper1">
+  <ul class="no-bullets">
+    <li *ngFor="let Applieddocuments of users | async">
+        <div class="wrapper">
+        Applicant Id: {{ Applieddocuments.id }}<br>
+        Applicant Name: {{ Applieddocuments.firstname }}<br>
+        Applicant phone number: {{ Applieddocuments.mobilenumber }} <br>
+        Applicant Gender: {{ Applieddocuments.gender }}<br>
+        Applicant Address:  {{ Applieddocuments.peraddress }}<br>
+        Applicant Email: {{ Applieddocuments.email }}<br>
+        Applicant Age: {{ Applieddocuments.age }}<br>
+        <button type="button" (click)="viewDoc(Applieddocuments.id)">View Document</button><br>
+    </div>
+    </li>
+  </ul>
+</div>
+</body>
